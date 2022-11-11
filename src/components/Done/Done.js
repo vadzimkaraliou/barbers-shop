@@ -8,8 +8,8 @@ const Done = () => {
     return (
         <section className="done-form">
             <section className="done-top">
-                    <MdDoneOutline className="done-logo"/>
-                    <div className="grate-text">DZIĘKUJEMY ZA ZAKUPY W NASZYM SKLEPIE</div>
+                <MdDoneOutline className="done-logo"/>
+                <div className="grate-text">DZIĘKUJEMY ZA ZAKUPY W NASZYM SKLEPIE</div>
             </section>
 
             <section className="done-bottom">
@@ -23,7 +23,7 @@ const Done = () => {
 
                 <a href="https://vadzimkaraliou.github.io/barberskb-test/" className="cart-links">
                     <div className="bottom-part">
-                        <img src={require("../assets/KB.png")} alt="logo" className="done-salon-logo"/>
+                        <img src={require("../../assets/KB.png")} alt="logo" className="done-salon-logo"/>
                         <div className="bottom-part-text">DO STRONY SALONU</div>
                     </div>
                 </a>

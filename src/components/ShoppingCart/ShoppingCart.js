@@ -1,6 +1,5 @@
 import React, {useContext, useState} from "react";
-import { Context } from "../context/AppContext";
-import {GoHome} from "react-icons/go";
+import {Context} from "../../context/AppContext";
 import {Link} from "react-router-dom";
 import {AiOutlineDelete} from 'react-icons/ai';
 import {MdOutlineNextPlan} from 'react-icons/md';
@@ -54,7 +53,7 @@ const ShoppingCart = () => {
                                 <p className="buyName">{item.item.name}</p>
                                 <p>x {item.quantity}</p>
 
-                                <p className="buyName"> PRICE: {item.item.price * item.quantity} EUR</p>
+                                <p className="buyName"> PRICE: {item.item.price} EUR</p>
                                 <RiAddFill className="deleteItem" title="Dodaj produkt"
                                            onClick={() => handleAddCartItem(item)}/>
                                 <AiOutlineDelete className="deleteItem" title="Usuń produkt"

@@ -1,3 +1,5 @@
+@import "src/Variables";
+
 .done-form {
   height: 88vh;
   width: 100vw;
@@ -49,7 +51,7 @@
 
     .done-bottom-logo {
       font-size: 40px;
-      color: rgb(163, 111, 69);
+      color: $color;
       margin-right: 10px;
     }
 
@@ -58,7 +60,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      border: 2px solid rgb(163, 111, 69);
+      border: 2px solid $color;
       margin-bottom: 20px;
       width: 250px;
       height: 58px;
@@ -69,14 +71,14 @@
       }
 
       &:hover {
-        background-color: rgb(163, 111, 69);
+        background-color: $color;
       }
 
-      &:hover .done-bottom-logo{
+      &:hover .done-bottom-logo {
         color: white;
       }
 
-      &:hover .bottom-part-text{
+      &:hover .bottom-part-text {
         color: white;
       }
     }

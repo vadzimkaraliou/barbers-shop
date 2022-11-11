@@ -1,0 +1,59 @@
+@import "src/Variables";
+
+.addDescription {
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -100px;
+  background-color: #f6eee5;
+  width: 320px;
+  padding: 60px 18px;
+  max-height: 350px;
+  overflow: auto;
+
+
+  @include desktop {
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -250px;
+    background-color: #f6eee5;
+    width: 500px;
+    padding: 40px 25px;
+    max-height: 550px;
+    overflow: auto;
+  }
+
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+  .description-text {
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .description-button {
+    background-color: white;
+    border: 1px solid darkgray;
+    padding: 5px 18px;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+
+    @include desktop {
+      padding: 6px 28px
+    }
+
+    &:hover {
+      color: $color;
+      border-color: $color;
+    }
+  }
+}

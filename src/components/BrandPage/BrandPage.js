@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import BrandPageItems from "./BrandPageItems";
+import BrandPageItems from "../BrandPageItems/BrandPageItems";
 
 function BrandPage({brand}) {
 
@@ -17,20 +17,19 @@ function BrandPage({brand}) {
                 throw new Error("Error...");
             }
             const data = await response.json();
-            console.log(data);
             const filteredArray = data.filter((element) => {
-                return element.brand === brand
+                return element.brand === brand;
             })
             setBrandArray(filteredArray);
             setLoading(false);
         }
         fetchData().catch(handleError);
-    },[])
+    },[]);
 
     return (
         <div>
             {isLoading ? (<div className='loadingPage'>
-                    <img src={require("../assets/moustache.png")} alt="moustache" className="moustache"/>
+                    <img src={require("../../assets/moustache.png")} alt="moustache" className="moustache"/>
                     <p>proszę zaczekać chwilę...</p>
             </div>) :
                 <BrandPageItems items={brandArray} />

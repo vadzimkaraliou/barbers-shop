@@ -1,3 +1,5 @@
+@import "../../Variables";
+
 .footer {
   background-color: #f7f7f7;
   padding: 20px 0;
@@ -61,7 +63,7 @@
 
   .fa-instagram, .fa-facebook, .fa-salon {
     font-size: 40px;
-    color: rgb(163, 111, 69);
+    color: $color;
 
     &:hover {
       opacity: 0.7;

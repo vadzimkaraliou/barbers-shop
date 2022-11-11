@@ -1,9 +1,8 @@
-import React, {useContext, useState } from "react";
+import React, { useState } from "react";
 import { BsFillPersonFill } from 'react-icons/bs';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { BiDetail } from 'react-icons/bi';
 import { RiErrorWarningFill } from 'react-icons/ri';
-import {MdPayment} from "react-icons/md";
 import {Link} from "react-router-dom";
 import { TbFileInvoice } from 'react-icons/tb';
 
@@ -42,13 +41,6 @@ const OrderPage = () => {
     const handleInvoice = () => {
         setInvoice(!invoice);
     }
-
-    // const [fullNameError, setFullNameError] = useState(false);
-    // const [email, setEmailError] = useState(false);
-    // const [address, setAddressError] = useState(false);
-    // const [postcode, setPostcodeError] = useState(false);
-    // const [city, setCityError] = useState(false);
-    // const [country, setCountryError] = useState(false);
 
     const handleChange = (e) => {
         const {name, value} = e.target;

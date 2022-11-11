@@ -10,7 +10,7 @@ const Dashboard = () => {
                 return (
                     <div className="brand" key={index}>
                         <div className="brand-name">{brand.toUpperCase()}</div>
-                        <img src={require("../assets/"+brand+".jpg")} alt={brand} className="dashboard-pic" title={brand.toUpperCase()} />
+                        <img src={require("../../assets/"+brand+".jpg")} alt={brand} className="dashboard-pic" title={brand.toUpperCase()} />
                         <Link to={brand.toUpperCase()}><button type="button" className="select-btn">Pokaż produkty</button></Link>
                     </div>
                 )

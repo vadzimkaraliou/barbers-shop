@@ -1,5 +1,5 @@
 .nav {
-  background-image: url("assets/barbiere.jpg");
+  background-image: url("../../assets/barbiere.jpg");
   background-position: bottom;
   background-size: cover;
   width: 100vw;
@@ -13,6 +13,10 @@
     background-position: bottom;
     height: 180px;
   }
+}
+
+.nav-icons {
+  display: flex;
 }
 
 .navLogo {
@@ -29,8 +33,9 @@
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  margin-right: 30px;
+  margin-right: 16px;
   transition: 0.5s;
+  color: black;
 
   &:hover {
     transform: scale(1.2);
@@ -39,6 +44,38 @@
   @include desktop {
     margin-right: 70px;
     font-size: 70px;
+  }
+}
+
+.quantity {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #b74949;
+  position: relative;
+  font-weight: bold;
+  font-size: 10px;
+  left: 23%;
+  top: 15%;
+  opacity: 90%;
+
+  @include desktop {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #b74949;
+    position: relative;
+    font-weight: bold;
+    font-size: 12px;
+    left: 16%;
+    top: 10%;
+    opacity: 90%;
   }
 
 }

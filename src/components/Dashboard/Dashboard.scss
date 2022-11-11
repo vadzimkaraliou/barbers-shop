@@ -1,4 +1,4 @@
-@import "src/Variables";
+@import "../../Variables";
 
 .cart-container {
   @include desktop {
@@ -22,6 +22,17 @@
     margin-right: 100px;
     margin-left: 100px;
   }
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
 }
 
 .brand {
@@ -57,7 +68,7 @@
   padding: 8px 60px;
   color: $color;
   background-color: white;
-  border: $color;
+  border: 2px solid $color;
   font-size: 20px;
   margin-bottom: 50px;
   border-radius: 2px;

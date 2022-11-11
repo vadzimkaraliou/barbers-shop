@@ -20,13 +20,13 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <a href="https://www.facebook.com/BarbersKD" target="_blank" title="Facebook" >
+                <a href="https://www.facebook.com/BarbersKD" target="_blank" title="Facebook" rel="noreferrer">
                     <BsFacebook className="fa-facebook" title="Facebook"/> </a>
 
-                <a href="https://www.instagram.com/barbers_kb/?igshid=YmMyMTA2M2Y%3D" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/barbers_kb/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noreferrer" title="Instagram">
                     <BsInstagram className="fa-instagram" title="Instagram"/> </a>
 
-                <a href="https://vadzimkaraliou.github.io/barberskb-test/" title="Do strony salonu">
+                <a href="https://vadzimkaraliou.github.io/barberskb-test/" title="Do strony salonu" rel="noreferrer">
                     <GoHome className="fa-salon" title="DO STRONY SALONU"/> </a>
 
             </div>

@@ -1,3 +1,5 @@
+@import "src/Variables";
+
 .cart-header {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -81,51 +83,51 @@
 
 }
 
-  .order-icons {
+.order-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  text-decoration: none;
+
+
+  .order-text {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+.order-icon {
+  color: $color;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.order-decision {
+  @include desktop {
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 60px
+
+  }
+}
+
+.cart-container {
+  @include desktop {
+    width: 100vw;
+    display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-    text-decoration: none;
-
-
-    .order-text {
-      text-decoration: none;
-      color: black;
-      font-size: 18px;
-      font-weight: bold;
-
-      &:hover {
-        color: rgb(163,111,69);
-      }
-    }
-}
-
-  .order-icon {
-    color: rgb(163,111,69);
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-  .order-decision {
-    @include desktop {
-      margin-top: 70px;
-      margin-bottom: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px
-
-    }
+    justify-content: center;
+    align-items: center;
   }
-
-  .cart-container {
-    @include desktop {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+}

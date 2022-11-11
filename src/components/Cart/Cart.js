@@ -1,11 +1,11 @@
-import React, {useContext, useState } from "react";
-import { Context } from "../context/AppContext";
+import React, { useContext } from "react";
+import { Context } from "../../context/AppContext";
 import {Link} from "react-router-dom";
 import { BsBasket2Fill } from 'react-icons/bs';
 import { MdPayment } from 'react-icons/md';
 
 const Cart = () => {
-    const {state, dispatch} = useContext(Context);
+    const {state} = useContext(Context);
 
     if (state.addedItems.length > 0) {
 
