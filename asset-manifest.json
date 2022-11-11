@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/barbers-shop/static/css/main.5d799418.css",
+    "main.js": "/barbers-shop/static/js/main.011fa1ee.js",
+    "static/js/787.3537356c.chunk.js": "/barbers-shop/static/js/787.3537356c.chunk.js",
+    "static/media/mineral.jpg": "/barbers-shop/static/media/mineral.041365fc4d944bf5898d.jpg",
+    "static/media/smashbox.jpg": "/barbers-shop/static/media/smashbox.d38650f8892598f914ba.jpg",
+    "static/media/pacifica.jpg": "/barbers-shop/static/media/pacifica.148d477a787944429666.jpg",
+    "static/media/KB.png": "/barbers-shop/static/media/KB.1f134385bd46fb5ff6c1.png",
+    "static/media/barbiere.jpg": "/barbers-shop/static/media/barbiere.5e432eda83c1e6f5e1de.jpg",
+    "static/media/benefit.jpg": "/barbers-shop/static/media/benefit.ee2156fb902acaa5634f.jpg",
+    "static/media/l'oreal.jpg": "/barbers-shop/static/media/l'oreal.eeb78c7dfa7d949a33a1.jpg",
+    "static/media/moustache.png": "/barbers-shop/static/media/moustache.d001fdbf2a891a450424.png",
+    "static/media/maybelline.jpg": "/barbers-shop/static/media/maybelline.7d69ddc382a03cec11c2.jpg",
+    "static/media/dior.jpg": "/barbers-shop/static/media/dior.fb8410bc28fca32880ee.jpg",
+    "static/media/marcelle.jpg": "/barbers-shop/static/media/marcelle.5487bb2bac027d81d252.jpg",
+    "static/media/nyx.jpg": "/barbers-shop/static/media/nyx.5487bb2bac027d81d252.jpg",
+    "static/media/clinique.jpg": "/barbers-shop/static/media/clinique.5dc299bf291adfea86a3.jpg",
+    "static/media/card.png": "/barbers-shop/static/media/card.d68bb818c62ba1beaea0.png",
+    "static/media/marienatie.jpg": "/barbers-shop/static/media/marienatie.39e3e3b02550ea110c54.jpg",
+    "static/media/apay.png": "/barbers-shop/static/media/apay.79c23ff0104f3c7f0fca.png",
+    "static/media/revlon.jpg": "/barbers-shop/static/media/revlon.cae84e44a03a98e8571a.jpg",
+    "static/media/blik.png": "/barbers-shop/static/media/blik.47b7747026c3cd969151.png",
+    "index.html": "/barbers-shop/index.html",
+    "main.5d799418.css.map": "/barbers-shop/static/css/main.5d799418.css.map",
+    "main.011fa1ee.js.map": "/barbers-shop/static/js/main.011fa1ee.js.map",
+    "787.3537356c.chunk.js.map": "/barbers-shop/static/js/787.3537356c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d799418.css",
+    "static/js/main.011fa1ee.js"
+  ]
+}
