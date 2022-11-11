@@ -1,0 +1,114 @@
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.2px solid rgb(163, 111, 69);
+  border-radius: 8px;
+  box-shadow: 5px 4px 21px -14px rgba(163, 111, 69, 1);
+  width: 350px;
+  margin-bottom: 20px;
+
+  @include desktop {
+    margin-right: 15px;
+    height: 630px;
+  }
+
+  h4, h5, h6 {
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+}
+
+.brandImg {
+  max-width: 250px;
+  cursor: pointer;
+}
+
+.add {
+  border-radius: 8px;
+  padding: 8px 40px;
+  font-size: 16px;
+  border: 1px solid rgb(163,111,69);
+}
+
+.brandDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandPageItemHeader {
+  text-align: center;
+  font-size: 40px;
+}
+
+.mainBack {
+  margin-top: 50px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .home {
+    color: rgb(163,111,69);
+    font-size: 30px;
+  }
+
+
+  div {
+    padding: 20px 30px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+
+    &:hover {
+      color: rgb(163,111,69);
+      border-color: rgb(163,111,69);
+    }
+
+  }
+
+  @include desktop {
+    padding: 15px 50px;
+    color: black;
+  }
+}
+
+.none {
+  display: none;
+}

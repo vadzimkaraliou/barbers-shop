@@ -1,0 +1,134 @@
+@import "src/Variables";
+
+.shopping-cart {
+  padding: 15px;
+  text-align: center;
+  width: 330px;
+  overflow: scroll;
+  max-height: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  background: #f6eee5;
+  color: black;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+
+
+  @include desktop {
+    width: 700px;
+    top: 190px;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+}
+
+.item {
+  padding: 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+
+  @include desktop {
+    width: 660px;
+  }
+
+  p {
+    font-size: 10px;
+    font-weight: bold;
+
+    @include desktop {
+      font-size: 13px;
+    }
+  }
+
+
+.smallBrandImg {
+  width: 50px;
+
+  @include desktop {
+    width: 70px;
+  }
+}
+
+}
+
+.empty {
+  width: 270px;
+  padding: 20px;
+  background-color: #FFEFE1;
+  color: black;
+  line-height: 25px;
+}
+
+.cart-btn {
+    cursor: pointer;
+    padding: 5px 40px;
+    color: $color;
+    background-color: white;
+    border: 2px solid $color;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  p {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+    &:hover {
+      color: white;
+      background-color: $color;
+      border-color: white;
+    }
+
+    &:hover .btn-additional {
+    color: white;
+  }
+}
+
+.totalAmount {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.deleteItem {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+
+  @include desktop {
+    font-size: 25px;
+  }
+}
+
+.btn-additional {
+  color: $color;
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.cart-link {
+  text-decoration: none;
+}
+
+.chooseBtnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

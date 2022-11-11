@@ -1,0 +1,131 @@
+.cart-header {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cart {
+  text-align: center;
+  border-top: 12px solid #f6eee5;
+  border-bottom: 12px solid #f6eee5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include desktop {
+    border-bottom: none;
+    width: 100%;
+  }
+
+  .cart-img {
+    width: 80px;
+    margin-bottom: 15px;
+
+    @include desktop {
+      width: 90px;
+      margin-bottom: 0;
+    }
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    border-bottom: 12px solid #f6eee5;
+    padding-bottom: 20px;
+
+    @include desktop {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px 30px;
+    }
+
+    div {
+      font-size: 16px;
+    }
+
+    .cart-price {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+  }
+
+  .cart-price-total {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+
+    @include desktop {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .cart-question {
+    text-align: center;
+  }
+
+  .order {
+    margin-bottom: 50px;
+  }
+
+}
+
+  .order-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-decoration: none;
+
+
+    .order-text {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+
+      &:hover {
+        color: rgb(163,111,69);
+      }
+    }
+}
+
+  .order-icon {
+    color: rgb(163,111,69);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+  .order-decision {
+    @include desktop {
+      margin-top: 70px;
+      margin-bottom: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px
+
+    }
+  }
+
+  .cart-container {
+    @include desktop {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

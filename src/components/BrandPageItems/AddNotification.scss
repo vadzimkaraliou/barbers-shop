@@ -1,0 +1,47 @@
+@import "Variables";
+
+.addNotification {
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  margin-top: -50px;
+  margin-left: -100px;
+  background-color: #f6eee5;
+  width: 250px;
+  height: 120px;
+
+  @include desktop {
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    background-color: #f6eee5;
+    width: 300px;
+    height: 120px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+  .notification-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .notification-button {
+    background-color: white;
+    border: 2px solid $color;
+    padding: 5px 18px;
+    border-radius: 15px;
+    color: $color;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

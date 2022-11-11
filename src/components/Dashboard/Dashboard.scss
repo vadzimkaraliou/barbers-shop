@@ -1,0 +1,71 @@
+@import "src/Variables";
+
+.cart-container {
+  @include desktop {
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-name {
+    font-size: 35px;
+    margin-bottom: 15px;
+
+    @include desktop {
+      font-weight: bold;
+    }
+  }
+}
+
+.dashboard-pic {
+  width: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  @include desktop {
+    width: 440px;
+    margin-bottom: 30px;
+    max-height: 440px;
+  }
+}
+
+.select-btn {
+  cursor: pointer;
+  padding: 8px 60px;
+  color: $color;
+  background-color: white;
+  border: $color;
+  font-size: 20px;
+  margin-bottom: 50px;
+  border-radius: 2px;
+
+  &:hover {
+    color: white;
+    background-color: $color;
+    border-color: white;
+  }
+}
+
