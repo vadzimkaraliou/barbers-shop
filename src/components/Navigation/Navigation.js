@@ -2,14 +2,20 @@ import React, {useContext, useState} from 'react';
 import {Context} from "../../context/AppContext";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import {MdOutlineShoppingCart} from 'react-icons/md';
-import {RiAddFill, RiSearchLine} from 'react-icons/ri';
+import {RiSearchLine} from 'react-icons/ri';
 import {Link} from "react-router-dom";
-import {AiOutlineDelete} from "react-icons/ai";
+import { useTranslation, Trans } from 'react-i18next';
 
+const lngs = {
+    pl: { nativeName: 'PL' },
+    en: { nativeName: 'EN' }
+  };
 
 const Navigation = () => {
-    const {state, dispatch} = useContext(Context);
+    const { state } = useContext(Context);
     const [isShoppingCartVisible, setIsShoppingCartVisible] = useState(false);
+
+    const { t, i18n } = useTranslation();
 
     const handleToggleShoppingCart = () => {
         setIsShoppingCartVisible(!isShoppingCartVisible);
@@ -18,16 +24,24 @@ const Navigation = () => {
     return (
         <nav className="nav">
             <Link to="/"><img src={require("../../assets/KB.png")} alt="logo" className="navLogo"
-                              title="Powrót do strony głównej"/></Link>
+                              title={t('goHome')}/></Link>
 
             <div className="nav-icons">
-                <Link to="/SEARCH"><RiSearchLine className="navBasket" title="Wyszukaj produkt"/></Link>
+                <Link to="/SEARCH"><RiSearchLine className="navBasket" title={t('searchProducts')}/></Link>
 
                 {state.addedItems.length > 0 ? <div className="quantity"> { state.addedItems.map(item => item.quantity).reduce((total, item) => total + item) } </div> : null }
-                <MdOutlineShoppingCart className="navBasket" title="Zobacz koszyk"
+                <MdOutlineShoppingCart className="navBasket" title={t('showCart')}
                                        onClick={handleToggleShoppingCart}/>
 
                 {isShoppingCartVisible ? <ShoppingCart/> : null}
+              
+                {Object.keys(lngs).map((lng) => (
+                <button key={lng} className="languageBtn" type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                {lngs[lng].nativeName}
+                </button>
+          ))}
+
+
             </div>
         </nav>
     )

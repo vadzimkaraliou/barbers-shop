@@ -2,15 +2,19 @@ import React from 'react';
 import {BsFacebook, BsInstagram} from 'react-icons/bs';
 import {AiOutlineMail, AiFillPhone} from 'react-icons/ai';
 import {GoHome} from 'react-icons/go';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Footer = () => {
+
+    const { t, i18n } = useTranslation();
+
     return (
         <footer className="footer">
             <div className="footer-top">
                 <p>BARBERS KB</p>
                 <p>00-341 RADNA 10</p>
-                <p>WARSZAWA, POLSKA</p>
-                <p>GODZINY OTWARCIA (PN - SB) 10:00 - 20:00</p>
+                <p>{t('address')}</p>
+                <p>{t('openingHours')}</p>
                 <a href="mailto:kostiab7@gmail.com">
                     <AiOutlineMail className="footer-icons"/>
                     info@barberkb.pl</a>
@@ -27,7 +31,7 @@ const Footer = () => {
                     <BsInstagram className="fa-instagram" title="Instagram"/> </a>
 
                 <a href="https://vadzimkaraliou.github.io/barberskb-test/" title="Do strony salonu" rel="noreferrer">
-                    <GoHome className="fa-salon" title="DO STRONY SALONU"/> </a>
+                    <GoHome className="fa-salon" title={t('toSalonPage')}/> </a>
 
             </div>
         </footer>

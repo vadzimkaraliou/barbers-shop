@@ -2,8 +2,12 @@ import React, {useContext, useState } from "react";
 import { Context } from "../../context/AppContext";
 import { MdOutlinePayments } from 'react-icons/md';
 import {Link} from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Payment = () => {
+
+    const { t } = useTranslation();
+
     const {state, dispatch } = useContext(Context);
     const [clicked, setClicked] = useState(false);
 
@@ -28,16 +32,16 @@ const Payment = () => {
         <section className="payment">
             <div className="paymentTotal">
                 <MdOutlinePayments className="payment-icon"/>
-                <div>KWOTA DO ZAPŁATY:</div>
+                <div>{t('totalPrice')}</div>
                 <div>{result.toFixed(2)} EUR</div>
             </div>
 
             <div className="methods">
-                <div className="methods-header">METODY PŁATNOŚCI</div>
+                <div className="methods-header">{t('paymentMethods')}</div>
                 <div className="methods-options">
                     <div className="methods-option" onClick={handleClick}>
                         <img src={require("../../assets/card.png")} alt="paymentByCard"/>
-                        <div>KARTA PŁATNICZA</div>
+                        <div>{t('card')}</div>
                     </div>
                     <div className="methods-option" onClick={handleClick}>
                         <img src={require("../../assets/gpay.png")} alt="googlePay"/>
@@ -53,18 +57,18 @@ const Payment = () => {
                     </div>
                     <div className="methods-option" onClick={handleClick}>
                         <img src={require("../../assets/transfer.png")} alt="transfer"/>
-                        <div>PRZELEW</div>
+                        <div>{t('transfer')}</div>
                     </div>
                     <div className="methods-option" onClick={handleClick}>
                         <img src={require("../../assets/dpd.png")} alt="paymentToCourier"/>
-                        <div>PŁATNOŚĆ ZA POBRANIEM</div>
+                        <div>{t('cash')}</div>
                     </div>
                 </div>
             </div>
 
             {clicked === true &&
             <Link to="/DONE" className="done">
-                <button type="submit" className="doneBtn" onClick={handleDeleteAll}>ZAPŁAĆ</button>
+                <button type="submit" className="doneBtn" onClick={handleDeleteAll}>{t('finalPay')}</button>
             </Link>
             }
 

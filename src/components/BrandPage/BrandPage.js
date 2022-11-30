@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import BrandPageItems from "../BrandPageItems/BrandPageItems";
+import { useTranslation, Trans } from 'react-i18next';
 
 function BrandPage({brand}) {
+
+    const { t, i18n } = useTranslation();
 
     const handleError = (err) => {
         console.error(err);
@@ -12,7 +15,7 @@ function BrandPage({brand}) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response =  await fetch("http://makeup-api.herokuapp.com/api/v1/products.json");
+            const response =  await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
             if (!response.ok) {
                 throw new Error("Error...");
             }
@@ -30,7 +33,7 @@ function BrandPage({brand}) {
         <div>
             {isLoading ? (<div className='loadingPage'>
                     <img src={require("../../assets/moustache.png")} alt="moustache" className="moustache"/>
-                    <p>proszę zaczekać chwilę...</p>
+                    <p>{t('waitNotification')}</p>
             </div>) :
                 <BrandPageItems items={brandArray} />
             }

@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import BrandPageItems from "../BrandPageItems/BrandPageItems";
 import { FaSadTear } from 'react-icons/fa';
-
+import { useTranslation, Trans } from 'react-i18next';
 
 const Search = () => {
+
+    const { t, i18n } = useTranslation();
 
     const handleError = (err) => {
         console.error(err);
@@ -22,7 +24,7 @@ const Search = () => {
         setWait(true);
 
         const fetchData = async () => {
-            const response =  await fetch("http://makeup-api.herokuapp.com/api/v1/products.json");
+            const response =  await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
             if (!response.ok) {
                 throw new Error("Error...");
             }
@@ -61,18 +63,18 @@ const Search = () => {
 
             { wait === true ? (<div className='loadingPage loading-search'>
             <img src={require("../../assets/moustache.png")} alt="moustache" className="moustache"/>
-            <p>proszę zaczekać chwilę...</p>
+            <p>{t('waitNotification')}</p>
         </div>)  : ( <>
-                <h1>ZNAJDŹ SWÓJ ULUBIONY BRAND</h1>
+                <h1>{t('search')}</h1>
                 <form onSubmit={handleSubmit} className="search-form">
-                    <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="WPISZ MARKĘ PRODUKTU"/>
-                    <button type="submit" className="select-btn search-btn">SZUKAJ</button>
+                    <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder={t('typeBrand')}/>
+                    <button type="submit" className="select-btn search-btn">{t('searchSubmit')}</button>
                 </form>
 
                 { notFound === false ? null : (
                     <>
                         <FaSadTear className="notFoundIcon"/>
-                        <h1>NIE MAMY TAKIEJ MARKI...</h1>
+                        <h1>{t('noResults')}</h1>
                     </>
                 ) }
                 { loaded === true ? <BrandPageItems items={result} /> : null }

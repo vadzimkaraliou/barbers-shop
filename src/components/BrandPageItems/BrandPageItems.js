@@ -3,8 +3,11 @@ import {Context} from "../../context/AppContext";
 import {Link} from "react-router-dom";
 import {GoHome} from 'react-icons/go';
 import Image from "../Image/Image";
+import { useTranslation, Trans } from 'react-i18next';
 
 const BrandPageItems = ({items}) => {
+
+    const { t, i18n } = useTranslation();
 
     const {dispatch} = useContext(Context);
     const [clicked, setClicked] = useState(false);
@@ -15,6 +18,9 @@ const BrandPageItems = ({items}) => {
             payload: item
         });
         setClicked(true);
+        setTimeout(() => {
+            setClicked(false);
+        }, 1000);
     };
 
     return (
@@ -32,24 +38,21 @@ const BrandPageItems = ({items}) => {
                             </div>
 
                             <div className="addBtn">
-                                <button type="button" className="select-btn add" onClick={() => handleAddItem(item)}>DO
-                                    KOSZYKA
-                                </button>
+                                <button type="button" className="select-btn add" onClick={() => handleAddItem(item)}>{t('addToCart')}</button>
                             </div>
                         </div>
                     ))}
             </div>
             <Link to="/" className="mainBack">
                 <GoHome className="home"/>
-                <div>POWRÓT DO GŁÓWNEJ STRONY</div>
+                <div>{t('goHome')}</div>
             </Link>
 
             {clicked === true &&
                 (
                     <>
                         <div className="addNotification">
-                            <div className="notification-text">DODANE DO KOSZYKA</div>
-                            <button className="notification-button" onClick={() => setClicked(false)}>OK</button>
+                            <div className="notification-text">{t('added')}</div>
                         </div>
 
                     </>

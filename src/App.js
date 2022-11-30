@@ -11,7 +11,7 @@ import Done from "./components/Done/Done";
 import Search from "./components/Search/Search";
 
 import {
-    BrowserRouter,
+    HashRouter,
     Route,
     Routes,
     Outlet
@@ -30,7 +30,7 @@ const Main = () => {
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                     <Route path='/' element={<Main />} >
                         <Route path='/' element={<Dashboard />} />
@@ -44,7 +44,7 @@ const App = () => {
                     </Route>
                     <Route path='/DONE' element={<Done />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
