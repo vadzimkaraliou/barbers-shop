@@ -62,6 +62,7 @@
   left: 14.5%;
   top: 15%;
   opacity: 90%;
+  z-index: 999;
 
   @include desktop {
     width: 28px;
@@ -88,7 +89,7 @@
   padding: 0 7px;
   background-color: transparent;
   border: none;
-  transition: .4s;
+  transition: 0.4s;
   color: black;
 
   &:hover {
